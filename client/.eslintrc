@@ -1,6 +1,13 @@
 {
   "env": {
-    "browser": true
+    "browser": true,
+    "es2021": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
   },
   "rules": {
     // Override our default settings just for this directory
