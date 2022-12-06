@@ -22,7 +22,10 @@ module.exports = () => {
         template: './index.html',
         title: 'Text Editor'
       }),
-
+      new InjectManifest({
+        swSrc: '/src-sw.js',
+        swDest: 'src-sw.js'
+      }),
       new WebpackPwaManifest( {
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E.',
@@ -46,7 +49,6 @@ module.exports = () => {
 
     module: {
       rules: [
-        
         {
           test: /\.css$/i,
           use: ["style-loader", "css-loader"],
